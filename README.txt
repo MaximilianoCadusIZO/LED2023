@@ -1,0 +1,1 @@
+Hola! Este repositorio está creado para la materia Lógica y Estructura de Datos del Instituto Zona Oeste Rosario. 
