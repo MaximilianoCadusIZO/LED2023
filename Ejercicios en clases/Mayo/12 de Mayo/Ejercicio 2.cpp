@@ -19,37 +19,44 @@ Fin
 main (){
 
  //Declaración de variables
- int opcion;
+ int opcion, salir;
  float num1, num2;
  bool menu = true;
  
- while (menu = true){
+ //Utilizo bucle while para volver al menú luego de ejecutar una opción
+ while (menu){
  	
+ 	system("cls");
  	printf("IZO");
  	printf("\n\n1-Mostrar datos alumno");
  	printf("\n2-Ingresar 2 numeros y mostrar el mayor");
  	printf("\n3-Salir");
- 	printf("\nIngrese una opcion valida: ");
+ 	printf("\n\nIngrese una opcion: ");
+ 	//Valido que la opcion ingresada sea valida
  	while (scanf("%i", &opcion) != 1 || opcion < 1 || opcion > 3){
  		
- 		printf("\nError. Debe ingresar una opcion valido del 1 al 3");
+ 		printf("\nError. Debe ingresar una opcion valida del 1 al 3");
  		// Limpiamos el buffer de entrada para evitar que scanf entre en un bucle infinito
         while(getchar() != '\n');
         printf("\nIngrese una opcion valida: ");
  		
 	 }
  	
+ 	//Utilizo switch para ejecutar lo que ingreso el usuario
  	switch (opcion){
  		
  		case 1:
- 			printf("\nNombre: Maximiliano Cadus");
- 			printf("\nDNI: 43.379.524\n");
+ 			system("cls");
+ 			printf("Datos del alumno: ");
+ 			printf("\n\nNombre: Maximiliano Cadus");
+ 			printf("\nDNI: 43.379.524\n\n");
  			system("Pause");
  			break;
  		
  		case 2:
+ 			system("cls");
  			printf("\nIngrese dos numeros para mostrar el mayor");
- 			printf("\nIngrese el primer numero: ");
+ 			printf("\n\nIngrese el primer numero: ");
  			while (scanf("%f", &num1) != 1){
  		
  				printf("\nError. Debe ingresar un numero valido.");
@@ -68,14 +75,27 @@ main (){
  		
 	 		}
 	 		if (num1 > num2)
-	 		printf("\nEl numero mayor es: %.2f", num1);
+	 			printf("\nEl numero mayor es: %.2f", num1);
 	 		else
-	 		printf("\nEl numero mayor es: %.2f \n", num2);
+	 			printf("\nEl numero mayor es: %.2f", num2);
+	 		printf("\n\n");
 	 		system("pause");
 	 		break;
 	 	
 	 	case 3:
-	 		menu == false;
+	 		system("cls");
+	 		printf("Seguro que quiere salir del programa?");
+	 		printf("\n\nSeleccione 1 para salir / 2 para regresar: ");
+	 		while (scanf("%i", &salir) != 1 || salir < 1 || salir > 2){
+	 			
+	 			printf("\nError. Debe ingresar una opcion valida.");
+ 				// Limpiamos el buffer de entrada para evitar que scanf entre en un bucle infinito
+       			while(getchar() != '\n');
+        		printf("\nIngrese una opcion valida: ");
+	 			
+			}
+			if (salir == 1)
+	 			menu = false;
 	 		break;
  		
 	 }
