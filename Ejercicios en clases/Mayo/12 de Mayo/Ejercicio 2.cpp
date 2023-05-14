@@ -15,6 +15,7 @@ Fin
 #include<stdio.h>
 #include<conio.h>
 #include<windows.h>
+#include <stdbool.h>
 
 main (){
 
@@ -55,7 +56,7 @@ main (){
  		
  		case 2:
  			system("cls");
- 			printf("\nIngrese dos numeros para mostrar el mayor");
+ 			printf("Ingrese dos numeros para mostrar el mayor");
  			printf("\n\nIngrese el primer numero: ");
  			while (scanf("%f", &num1) != 1){
  		
