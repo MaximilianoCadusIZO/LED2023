@@ -28,9 +28,9 @@ main (){
  while (menu){
  	
  	system("cls");
- 	printf("IZO");
- 	printf("\n\n1-Mostrar datos alumno");
- 	printf("\n2-Ingresar 2 numeros y mostrar el mayor");
+ 	printf("Bienvenido al sistema IZO");
+ 	printf("\n\n1-Mostrar datos del alumno");
+ 	printf("\n2-Ingresar dos numeros y mostrar el mayor");
  	printf("\n3-Salir");
  	printf("\n\nIngrese una opcion: ");
  	//Valido que la opcion ingresada sea valida
@@ -39,7 +39,7 @@ main (){
  		printf("\nError. Debe ingresar una opcion valida del 1 al 3");
  		// Limpiamos el buffer de entrada para evitar que scanf entre en un bucle infinito
         while(getchar() != '\n');
-        printf("\nIngrese una opcion valida: ");
+        printf("\nIngrese una opcion: ");
  		
 	 }
  	
@@ -63,7 +63,7 @@ main (){
  				printf("\nError. Debe ingresar un numero valido.");
  				// Limpiamos el buffer de entrada para evitar que scanf entre en un bucle infinito
        			while(getchar() != '\n');
-        		printf("\nIngrese un numero valido: ");
+        		printf("\nIngrese el primer numero: ");
  		
 	 		}
 	 		printf("\nIngrese el segundo numero: ");
@@ -72,7 +72,7 @@ main (){
  				printf("\nError. Debe ingresar un numero valido.");
  				// Limpiamos el buffer de entrada para evitar que scanf entre en un bucle infinito
        			while(getchar() != '\n');
-        		printf("\nIngrese un numero valido: ");
+        		printf("\nIngrese el segundo numero: ");
  		
 	 		}
 	 		if (num1 > num2)
@@ -92,7 +92,7 @@ main (){
 	 			printf("\nError. Debe ingresar una opcion valida.");
  				// Limpiamos el buffer de entrada para evitar que scanf entre en un bucle infinito
        			while(getchar() != '\n');
-        		printf("\nIngrese una opcion valida: ");
+        		printf("\nIngrese una opcion: ");
 	 			
 			}
 			if (salir == 1)
