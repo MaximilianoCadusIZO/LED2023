@@ -15,19 +15,14 @@ Fin
 #include<stdio.h>
 #include<conio.h>
 #include<windows.h>
-#include <stdbool.h>
+#include<stdbool.h>
 
-main (){
+int main (void){
 
  //Declaración de variables
  int opcion, salir;
  float num1, num2;
  bool menu = true;
-
- 
- /*printf("SISTEMA IZO \n\nPresione una tecla para comenzar");
-
- getch();*/
  
  //Utilizo bucle while para volver al menú luego de ejecutar una opción
  while (menu){
@@ -72,9 +67,9 @@ main (){
  		
 	 		}
 	 		printf("\nIngrese el segundo numero: ");
-	 		while (scanf("%f", &num2) != 1){
+	 		while (scanf("%f", &num2) != 1  || num1 == num2){
  		
- 				printf("\nError. Debe ingresar un numero valido.");
+ 				printf("\nError. Debe ingresar un numero valido distinto al anterior.");
  				// Limpiamos el buffer de entrada para evitar que scanf entre en un bucle infinito
        			while(getchar() != '\n');
         		printf("\nIngrese el segundo numero: ");
