@@ -23,12 +23,17 @@ main (){
  int opcion, salir;
  float num1, num2;
  bool menu = true;
+
+ 
+ /*printf("SISTEMA IZO \n\nPresione una tecla para comenzar");
+
+ getch();*/
  
  //Utilizo bucle while para volver al menú luego de ejecutar una opción
  while (menu){
  	
  	system("cls");
- 	printf("Bienvenido al sistema IZO");
+ 	printf("\x1b[44mBienvenido al sistema IZO\x1b[0m");
  	printf("\n\n1-Mostrar datos del alumno");
  	printf("\n2-Ingresar dos numeros y mostrar el mayor");
  	printf("\n3-Salir");
@@ -48,15 +53,15 @@ main (){
  		
  		case 1:
  			system("cls");
- 			printf("Datos del alumno: ");
- 			printf("\n\nNombre: Maximiliano Cadus");
- 			printf("\nDNI: 43.379.524\n\n");
+ 			printf("\x1b[42mDatos del alumno:\x1b[0m");
+ 			printf("\n\n\x1b[32mNombre:\x1b[0m Maximiliano Cadus");
+ 			printf("\n\x1b[32mDNI:\x1b[0m 43.379.524\n\n");
  			system("Pause");
  			break;
  		
  		case 2:
  			system("cls");
- 			printf("Ingrese dos numeros para mostrar el mayor");
+ 			printf("\x1b[42mIngrese dos numeros para mostrar el mayor\x1b[0m");
  			printf("\n\nIngrese el primer numero: ");
  			while (scanf("%f", &num1) != 1){
  		
@@ -85,8 +90,8 @@ main (){
 	 	
 	 	case 3:
 	 		system("cls");
-	 		printf("Seguro que quiere salir del programa?");
-	 		printf("\n\nSeleccione 1 para salir / 2 para regresar: ");
+	 		printf("\x1b[41mSeguro que quiere salir del programa?\x1b[0m");
+	 		printf("\n\nSeleccione \x1b[31m1 para salir\x1b[0m / \x1b[32m2 para regresar\x1b[0m: ");
 	 		while (scanf("%i", &salir) != 1 || salir < 1 || salir > 2){
 	 			
 	 			printf("\nError. Debe ingresar una opcion valida.");
