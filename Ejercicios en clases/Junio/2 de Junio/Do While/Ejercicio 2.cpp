@@ -10,16 +10,27 @@ Como no se conoce la cantidad de empleados, luego de ingresar cada sueldo deberá
 #include<conio.h>
 #include<windows.h>
 
-int main (void){
-	
-	float imp, impTotal;
-	
-	printf("Hola! Bienvenido al sistema.");
-	do{
-	
-		printf("\n\nSueldo a promediar: ");
-		scanf("%f", imp);
-		
-	} while (imp != 0);
-	
+int main(void) {
+    
+	int empleados = 0;
+    float sueldo, sumaSueldos = 0, sueldoPromedio;
+    char opcion;
+
+    do {
+        printf("Ingrese el sueldo a pagar: ");
+        scanf("%f", &sueldo);
+
+        empleados++;
+        sumaSueldos += sueldo;
+
+        printf("Continua o Finaliza? (C/F): ");
+        scanf(" %c", &opcion);
+
+    } while (opcion == 'C' || opcion == 'c');
+
+    sueldoPromedio = sumaSueldos / empleados;
+
+    printf("\nSueldo promedio a pagar: %.2f\n", sueldoPromedio);
+
+    return 0;
 }
